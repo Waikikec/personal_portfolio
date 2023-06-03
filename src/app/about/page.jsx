@@ -46,7 +46,7 @@ const About = () => {
           </p>
         </div>
         <div className={styles.item}>
-          <h1 className={styles.title}>Who Are We?</h1>
+          <h1 className={styles.title}>What We Do?</h1>
           <p className={styles.desc}>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil porro
             maxime vel cumque, harum consectetur enim tenetur nesciunt saepe
