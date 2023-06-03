@@ -9,7 +9,12 @@ const Contact = () => {
       <div className={styles.title}>Let&apos;s Keep in Touch!</div>
       <div className={styles.content}>
         <div className={styles.imgContainer}>
-          <Image src='/contact.png' alt='' fill className={styles.image} />
+          <Image
+            src='/contact.png'
+            alt=''
+            fill={true}
+            className={styles.image}
+          />
         </div>
         <form className={styles.form}>
           <input type='text' placeholder='name' className={styles.input} />
