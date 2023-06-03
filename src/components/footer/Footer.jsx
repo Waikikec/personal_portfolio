@@ -1,10 +1,12 @@
 import React from 'react';
+import styles from './footer.module.css';
+import Image from 'next/image';
 
 const Footer = () => {
   return (
-    <div>
+    <div className={styles.container}>
       <div>© 2023 Martin Yankov. All rights reserved.</div>
-      <div></div>
+      <div>Logos</div>
     </div>
   );
 };
