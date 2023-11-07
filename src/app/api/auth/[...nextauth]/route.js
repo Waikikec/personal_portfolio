@@ -18,7 +18,9 @@ const handler = NextAuth({
         await connect();
 
         try {
-          const user = await User.findOne({ email: credentials.email });
+          const user = await User.findOne({
+            email: credentials.email,
+          });
 
           if (user) {
             const isPasswordCorrect = await bcrypt.compare(
@@ -41,7 +43,7 @@ const handler = NextAuth({
     }),
   ],
   pages: {
-    error: 'dashboard/login',
+    error: '/dashboard/login',
   },
 });
 

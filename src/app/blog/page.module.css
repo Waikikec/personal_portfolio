@@ -5,13 +5,9 @@
     margin-bottom: 50px;
 }
 
-.imgContainer {}
-
 .image {
     object-fit: cover;
 }
-
-.content {}
 
 .title {
     margin-bottom: 10px;
