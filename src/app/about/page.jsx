@@ -3,6 +3,11 @@ import styles from './page.module.css';
 import Image from 'next/image';
 import Button from '@/components/Button/Button';
 
+export const metadata = {
+  title: 'Waikiki - About Me',
+  description: 'This is About Me Page',
+};
+
 const About = () => {
   return (
     <div className={styles.container}>
