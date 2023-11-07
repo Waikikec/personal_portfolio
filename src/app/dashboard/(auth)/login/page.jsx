@@ -1,8 +1,26 @@
 'use client';
-import { signIn } from 'next-auth/react';
+import { signIn, useSession } from 'next-auth/react';
+import { useRouter } from 'next/navigation';
 import React from 'react';
+import styles from './page.module.css';
 
 const Login = () => {
+  const session = useSession();
+
+  const router = useRouter();
+
+  if (session.status === 'loading') {
+    return <p>Loading...</p>;
+  }
+
+  if (session.status === 'authenticated') {
+    router.push('/dashboard');
+  }
+
+  if (session.status === 'authenticated') {
+    return <div className={styles.container}>Dashboard</div>;
+  }
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -13,7 +31,7 @@ const Login = () => {
   };
 
   return (
-    <div>
+    <div className={styles.container}>
       <form className={styles.form} onSubmit={handleSubmit}>
         <input
           type='email'
